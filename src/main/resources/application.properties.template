@@ -1,0 +1,4 @@
+spring.application.name=<App Name>
+spring.data.mongodb.uri=mongodb+srv://<username>:<password>@<localhost:27017>
+server.port=<Server Port>
+spring.data.mongodb.database=<DB Name>

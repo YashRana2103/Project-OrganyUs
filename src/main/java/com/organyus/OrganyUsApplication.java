@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.config.EnableMongoAuditing;
 
 @SpringBootApplication
-@EnableMongoAuditing
+@EnableMongoAuditing // required for createdAt and updatedAt
 public class OrganyUsApplication {
 
 	public static void main(String[] args) {

@@ -2,6 +2,7 @@ package com.organyus.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.organyus.config.CustomAuditor;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -10,6 +11,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
+import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -55,8 +57,14 @@ public class User {
     @CreatedDate
     private LocalDateTime createdAt;
 
+    @CreatedBy
+    private CustomAuditor createdBy;
+
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+    @CreatedBy
+    private CustomAuditor updateBy;
 
     public enum Status{
         ACTIVE, INACTIVE, TERMINATED

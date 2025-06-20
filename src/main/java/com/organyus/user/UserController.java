@@ -1,12 +1,14 @@
 package com.organyus.user;
 
 import jakarta.validation.Valid;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
@@ -29,8 +31,24 @@ class UserController {
         return new ResponseEntity<>(allUsers, HttpStatus.OK);
     }
 
-//    @GetMapping("/{id}")
-//    public ResponseEntity<?> getUserById(ObjectId id){
-//
-//    }
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getUserById(@Valid @PathVariable ObjectId id) {
+        Optional<User> optionalUser = userService.getUserById(id);
+        if (optionalUser.isEmpty()) {
+            return new ResponseEntity<>("User not found!", HttpStatus.NOT_FOUND);
+        }
+
+        // also works
+//        return new ResponseEntity<>(optionalUser, HttpStatus.OK);
+
+        // also works
+        User userById = optionalUser.get();
+        return new ResponseEntity<>(userById, HttpStatus.OK);
+
+        // ChatGPT
+//        return optionalUser
+//                .map(user -> new ResponseEntity<>(user, HttpStatus.OK))
+//                .orElseGet(() -> new ResponseEntity<>("User not found!", HttpStatus.NOT_FOUND));
+
+    }
 }

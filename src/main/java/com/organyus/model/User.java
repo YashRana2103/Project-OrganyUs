@@ -3,6 +3,7 @@ package com.organyus.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,9 +27,11 @@ public class User {
     @Id
     private ObjectId uid;
 
-//    private ObjectId deptId;
+    @NotNull
+    private ObjectId deptId;
 
-//    private ObjectId rid;
+    @NotNull
+    private ObjectId rid;
 
     @NotBlank
     private String name;

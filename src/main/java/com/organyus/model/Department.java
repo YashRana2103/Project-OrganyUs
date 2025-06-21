@@ -31,7 +31,7 @@ public class Department {
 
     private String desc;
 
-//    private ObjectId deptHeadId;
+    private ObjectId deptHeadId;
 
     private State state = State.ACTIVE;
 

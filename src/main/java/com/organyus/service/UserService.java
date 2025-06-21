@@ -15,18 +15,20 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User createUser(User user){
-        // TODO: check if user already exists here
-
+    public User addOne(User user){
         userRepository.save(user);
         return user;
     }
 
-    public List<User> getAllUsers(){
+    public List<User> addAll(List<User> users) {
+        return userRepository.saveAll(users);
+    }
+
+    public List<User> getAll(){
         return userRepository.findAll();
     }
 
-    public Optional<User> getUserById(ObjectId id){
-        return userRepository.findById(id);
+    public Optional<User> getById(ObjectId uid){
+        return userRepository.findById(uid);
     }
 }

@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Role {
     @Id
-    private ObjectId id;
+    private ObjectId rid;
 
     @NotBlank
     private String name;
@@ -29,7 +29,7 @@ public class Role {
     @NotBlank
     private String slug;
 
-    private String description;
+    private String desc;
 
     private Boolean isSystemRole = false;
 

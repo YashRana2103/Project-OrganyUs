@@ -1,5 +1,6 @@
 package com.organyus.controller;
 
+import com.organyus.model.Department;
 import com.organyus.model.Role;
 import com.organyus.service.RoleService;
 import jakarta.validation.Valid;
@@ -22,25 +23,30 @@ public class RoleController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createRole(@Valid @RequestBody Role role){
-        return new ResponseEntity<>(roleService.createRole(role), HttpStatus.OK);
+    public ResponseEntity<?> addOne(@Valid @RequestBody Role role){
+        return new ResponseEntity<>(roleService.addOne(role), HttpStatus.OK);
+    }
+
+    @PostMapping("/all")
+    public ResponseEntity<?> addAll(@Valid @RequestBody List<Role> roles) {
+        return new ResponseEntity<>(roleService.addAll(roles), HttpStatus.OK) ;
     }
 
     @GetMapping
-    public ResponseEntity<?> getAllRoles(){
-        List<Role> allRoles = roleService.getAllRoles();
-        if(allRoles.isEmpty()){
+    public ResponseEntity<?> getAll(){
+        List<Role> roles = roleService.getAll();
+        if(roles.isEmpty()){
             return new ResponseEntity<>("No roles found!", HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(allRoles, HttpStatus.OK);
+        return new ResponseEntity<>(roles, HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<?> getRoleById(@Valid @PathVariable ObjectId id){
-        Optional<Role> roleById = roleService.getRoleById(id);
-        if(roleById.isEmpty()){
+    @GetMapping("/{rid}")
+    public ResponseEntity<?> getById(@Valid @PathVariable ObjectId rid){
+        Optional<Role> role = roleService.getById(rid);
+        if(role.isEmpty()){
             return new ResponseEntity<>("No role found!", HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(roleById.get(), HttpStatus.OK);
+        return new ResponseEntity<>(role.get(), HttpStatus.OK);
     }
 }

@@ -17,15 +17,19 @@ public class DepartmentService {
     @Autowired
     private DepartmentRepository departmentRepository;
 
-    public Department createDepartment(Department department) {
-        return departmentRepository.save(department);
+    public Department addOne(Department dept) {
+        return departmentRepository.save(dept);
     }
 
-    public List<Department> getAllDepartments() {
+    public List<Department> addAll(List<Department> depts) {
+        return departmentRepository.saveAll(depts);
+    }
+
+    public List<Department> getAll() {
         return departmentRepository.findAll();
     }
 
-    public Optional<Department> getDepartmentById(@Valid ObjectId id) {
-        return departmentRepository.findById(id);
+    public Optional<Department> getById(@Valid ObjectId deptId) {
+        return departmentRepository.findById(deptId);
     }
 }

@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Department {
     @Id
-    private ObjectId id;
+    private ObjectId deptId;
 
     @NotBlank
     private String name;
@@ -29,11 +29,11 @@ public class Department {
     @NotBlank
     private String slug;
 
-    private String description;
+    private String desc;
 
 //    private ObjectId deptHeadId;
 
-    private Status status = Status.ACTIVE;
+    private State state = State.ACTIVE;
 
     @Indexed
     @CreatedDate
@@ -42,7 +42,7 @@ public class Department {
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
-    public enum Status {
+    public enum State {
         ACTIVE,
         INACTIVE
     }

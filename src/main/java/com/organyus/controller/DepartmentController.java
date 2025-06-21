@@ -23,25 +23,30 @@ public class DepartmentController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createDepartment(@Valid @RequestBody Department department) {
-        return new ResponseEntity<>(departmentService.createDepartment(department), HttpStatus.OK) ;
+    public ResponseEntity<?> addOne(@Valid @RequestBody Department dept) {
+        return new ResponseEntity<>(departmentService.addOne(dept), HttpStatus.OK) ;
+    }
+
+    @PostMapping("/all")
+    public ResponseEntity<?> addAll(@Valid @RequestBody List<Department> depts) {
+        return new ResponseEntity<>(departmentService.addAll(depts), HttpStatus.OK) ;
     }
 
     @GetMapping
-    public ResponseEntity<?> getAllDepartments(){
-        List<Department> allDepartments = departmentService.getAllDepartments();
-        if(allDepartments.isEmpty()){
+    public ResponseEntity<?> getAll(){
+        List<Department> depts = departmentService.getAll();
+        if(depts.isEmpty()){
             return new ResponseEntity<>("No departments found!", HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(allDepartments, HttpStatus.OK);
+        return new ResponseEntity<>(depts, HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<?> getDepartmentById(@Valid @PathVariable ObjectId id) {
-        Optional<Department> departmentById = departmentService.getDepartmentById(id);
-        if(departmentById.isEmpty()){
+    @GetMapping("/{deptId}")
+    public ResponseEntity<?> getById(@Valid @PathVariable ObjectId deptId) {
+        Optional<Department> dept = departmentService.getById(deptId);
+        if(dept.isEmpty()){
             return new ResponseEntity<>("No department found!", HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(departmentById.get(), HttpStatus.OK);
+        return new ResponseEntity<>(dept.get(), HttpStatus.OK);
     }
 }

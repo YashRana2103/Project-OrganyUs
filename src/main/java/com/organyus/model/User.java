@@ -24,14 +24,14 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class User {
     @Id
-    private ObjectId id;
+    private ObjectId uid;
 
-//    private ObjectId departmentId;
+//    private ObjectId deptId;
 
-//    private ObjectId roleId;
+//    private ObjectId rid;
 
     @NotBlank
-    private String fullName;
+    private String name;
 
     @Email
     @NotBlank
@@ -40,14 +40,14 @@ public class User {
 
     @NotBlank
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // for not returning it in response accidentally
-    private String hashedPassword;
+    private String hashPwd;
 
     @NotBlank
     @Pattern(regexp = "\\d{10}", message = "Must be a valid 10-digit number")
-    private String contactNumber;
+    private String phone;
 
     @Indexed
-    private Status status = Status.ACTIVE;
+    private State state = State.ACTIVE;
 
     @Indexed
     @CreatedDate
@@ -56,7 +56,7 @@ public class User {
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
-    public enum Status{
+    public enum State{
         ACTIVE, INACTIVE, TERMINATED
     }
 }

@@ -1,5 +1,6 @@
 package com.organyus.service;
 
+import com.organyus.model.Department;
 import com.organyus.model.Role;
 import com.organyus.repository.RoleRepository;
 import org.bson.types.ObjectId;
@@ -15,15 +16,19 @@ public class RoleService {
     @Autowired
     private RoleRepository roleRepository;
 
-    public Role createRole(Role role) {
+    public Role addOne(Role role) {
         return roleRepository.save(role);
     }
 
-    public List<Role> getAllRoles() {
+    public List<Role> addAll(List<Role> roles) {
+        return roleRepository.saveAll(roles);
+    }
+
+    public List<Role> getAll() {
         return roleRepository.findAll();
     }
 
-    public Optional<Role> getRoleById(ObjectId id){
-        return roleRepository.findById(id);
+    public Optional<Role> getById(ObjectId rid){
+        return roleRepository.findById(rid);
     }
 }

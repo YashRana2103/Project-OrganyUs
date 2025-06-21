@@ -14,7 +14,7 @@ public class UserService {
     private UserRepository userRepository;
 
     public User createUser(User user){
-        // TOBE: check if user already exists here
+        // TODO: check if user already exists here
 
         userRepository.save(user);
         return user;

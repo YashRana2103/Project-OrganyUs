@@ -38,17 +38,8 @@ class UserController {
             return new ResponseEntity<>("User not found!", HttpStatus.NOT_FOUND);
         }
 
-        // also works
-//        return new ResponseEntity<>(optionalUser, HttpStatus.OK);
-
-        // also works
         User userById = optionalUser.get();
         return new ResponseEntity<>(userById, HttpStatus.OK);
-
-        // ChatGPT
-//        return optionalUser
-//                .map(user -> new ResponseEntity<>(user, HttpStatus.OK))
-//                .orElseGet(() -> new ResponseEntity<>("User not found!", HttpStatus.NOT_FOUND));
 
     }
 }

@@ -41,7 +41,6 @@ public class User {
 
     @NotBlank
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // for not returning it in response accidentally
-//    @JsonIgnore
     private String hashedPassword;
 
     @NotBlank
@@ -55,14 +54,8 @@ public class User {
     @CreatedDate
     private LocalDateTime createdAt;
 
-//    @CreatedBy
-//    private CustomAuditor createdBy;
-
     @LastModifiedDate
     private LocalDateTime updatedAt;
-
-//    @CreatedBy
-//    private CustomAuditor updateBy;
 
     public enum Status{
         ACTIVE, INACTIVE, TERMINATED

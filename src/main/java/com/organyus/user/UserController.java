@@ -37,9 +37,6 @@ class UserController {
         if (optionalUser.isEmpty()) {
             return new ResponseEntity<>("User not found!", HttpStatus.NOT_FOUND);
         }
-
-        User userById = optionalUser.get();
-        return new ResponseEntity<>(userById, HttpStatus.OK);
-
+        return new ResponseEntity<>(optionalUser.get(), HttpStatus.OK);
     }
 }

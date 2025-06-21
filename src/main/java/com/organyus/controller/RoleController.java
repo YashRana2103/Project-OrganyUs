@@ -4,7 +4,6 @@ import com.organyus.model.Role;
 import com.organyus.service.RoleService;
 import jakarta.validation.Valid;
 import org.bson.types.ObjectId;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +15,11 @@ import java.util.Optional;
 @RequestMapping("/roles")
 public class RoleController {
 
-    @Autowired
-    private RoleService roleService;
+    private final RoleService roleService;
+
+    public RoleController(RoleService roleService) {
+        this.roleService = roleService;
+    }
 
     @PostMapping
     public ResponseEntity<?> createRole(@Valid @RequestBody Role role){

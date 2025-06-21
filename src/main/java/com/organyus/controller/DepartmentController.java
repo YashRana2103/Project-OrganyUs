@@ -5,7 +5,6 @@ import com.organyus.model.Role;
 import com.organyus.service.DepartmentService;
 import jakarta.validation.Valid;
 import org.bson.types.ObjectId;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +16,11 @@ import java.util.Optional;
 @RequestMapping("/departments")
 public class DepartmentController {
 
-    @Autowired
-    private DepartmentService departmentService;
+    private final DepartmentService departmentService;
+
+    public DepartmentController(DepartmentService departmentService) {
+        this.departmentService = departmentService;
+    }
 
     @PostMapping
     public ResponseEntity<?> createDepartment(@Valid @RequestBody Department department) {

@@ -18,8 +18,7 @@ public class DepartmentService {
     private DepartmentRepository departmentRepository;
 
     public Department createDepartment(Department department) {
-        departmentRepository.save(department);
-        return department;
+        return departmentRepository.save(department);
     }
 
     public List<Department> getAllDepartments() {

@@ -1,6 +1,7 @@
 package com.organyus.model;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -29,6 +30,7 @@ public class Role {
     @NotBlank
     private String slug;
 
+    @NotBlank
     private String desc;
 
     private Boolean isSystemRole = false;

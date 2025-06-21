@@ -1,5 +1,7 @@
-package com.organyus.user;
+package com.organyus.service;
 
+import com.organyus.model.User;
+import com.organyus.repository.UserRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

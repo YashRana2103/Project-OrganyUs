@@ -1,5 +1,6 @@
-package com.organyus.role;
+package com.organyus.repository;
 
+import com.organyus.model.Role;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 

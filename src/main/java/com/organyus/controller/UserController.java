@@ -1,5 +1,7 @@
-package com.organyus.user;
+package com.organyus.controller;
 
+import com.organyus.model.User;
+import com.organyus.service.UserService;
 import jakarta.validation.Valid;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;

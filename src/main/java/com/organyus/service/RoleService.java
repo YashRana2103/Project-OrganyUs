@@ -1,5 +1,7 @@
-package com.organyus.role;
+package com.organyus.service;
 
+import com.organyus.model.Role;
+import com.organyus.repository.RoleRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +15,7 @@ public class RoleService {
     @Autowired
     private RoleRepository roleRepository;
 
-    public Object createRole(Role role) {
+    public Role createRole(Role role) {
         roleRepository.save(role);
         return role;
     }

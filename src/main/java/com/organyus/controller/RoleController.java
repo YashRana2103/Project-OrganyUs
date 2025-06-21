@@ -1,5 +1,7 @@
-package com.organyus.role;
+package com.organyus.controller;
 
+import com.organyus.model.Role;
+import com.organyus.service.RoleService;
 import jakarta.validation.Valid;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;

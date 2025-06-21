@@ -1,8 +1,6 @@
 package com.organyus.user;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.organyus.config.CustomAuditor;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -57,14 +55,14 @@ public class User {
     @CreatedDate
     private LocalDateTime createdAt;
 
-    @CreatedBy
-    private CustomAuditor createdBy;
+//    @CreatedBy
+//    private CustomAuditor createdBy;
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
-    @CreatedBy
-    private CustomAuditor updateBy;
+//    @CreatedBy
+//    private CustomAuditor updateBy;
 
     public enum Status{
         ACTIVE, INACTIVE, TERMINATED

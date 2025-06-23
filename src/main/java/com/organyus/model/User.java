@@ -33,9 +33,16 @@ public class User {
     @NotNull(message = "Role ID Can not be null")
     private ObjectId rid;
 
-    @NotBlank(message = "Name is required")
-    @Pattern(regexp = "^[A-Za-z ]+$", message = "Name must contain only letters (A–Z or a–z)")
-    private String name;
+    // Username must be 3-20 characters, letters, numbers, underscores only
+    @NotBlank(message = "Username is required")
+    @Size(min = 3, max = 20, message = "Username must be between 3 and 20 characters")
+    @Pattern(regexp = "^[A-Za-z0-9_]+$", message = "Username can only contain letters, numbers, and underscores")
+    @Indexed(unique = true)
+    private String username;
+
+    @NotBlank(message = "Full name is required")
+    @Pattern(regexp = "^[A-Za-z ]+$", message = "Full name contain only letters (A–Z or a–z)")
+    private String fullName;
 
     @NotBlank(message = "Email is required")
     @Email(message = "Must be a valid email")

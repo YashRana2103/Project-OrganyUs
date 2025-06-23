@@ -24,29 +24,38 @@ public class UserController {
 
 
     @PostMapping
-    public ResponseEntity<?> addOne(@Valid @RequestBody User user) {
-        return new ResponseEntity<>(userService.addOne(user), HttpStatus.OK);
+    public ResponseEntity<User> addOne(@Valid @RequestBody User user) {
+        User savedUser = userService.addOne(user);
+        return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
     }
 
     @PostMapping("/all")
-    public ResponseEntity<?> addAll(@Valid @RequestBody List<User> users) {
-        return new ResponseEntity<>(userService.addAll(users), HttpStatus.OK) ;
+    public ResponseEntity<List<User>> addAll(@Valid @RequestBody List<User> users) {
+        List<User> savedUsers = userService.addAll(users);
+        return new ResponseEntity<>(savedUsers, HttpStatus.CREATED);
     }
 
     @GetMapping
-    public ResponseEntity<?> getAll() {
+    public ResponseEntity<List<User>> getAll() {
         List<User> users = userService.getAll();
-        if (users.isEmpty()) {
-            return new ResponseEntity<>("No users found!", HttpStatus.NOT_FOUND);
-        }
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
-    @GetMapping("/{uid}")
-    public ResponseEntity<?> getById(@Valid @PathVariable ObjectId uid) {
-        Optional<User> user = userService.getById(uid);
+    @GetMapping("/id/{uid}")
+    public ResponseEntity<?> getById(@PathVariable String uid) {
+            ObjectId objectId = new ObjectId(uid);
+            Optional<User> user = userService.getById(objectId);
+            if (user.isEmpty()) {
+                return new ResponseEntity<>("User by ObjectId(\"" + uid + "\") not found!", HttpStatus.NOT_FOUND);
+            }
+            return new ResponseEntity<>(user.get(), HttpStatus.OK);
+    }
+
+    @GetMapping("/username/{username}")
+    public ResponseEntity<?> getByUsername(@PathVariable String username) {
+        Optional<User> user = userService.getByUsername(username);
         if (user.isEmpty()) {
-            return new ResponseEntity<>("User by ObjectId(\"" + uid + "\") not found!", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("User with username '" + username + "' not found!", HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(user.get(), HttpStatus.OK);
     }
@@ -106,4 +115,5 @@ public class UserController {
 
     // PATCH - updateProfileById // to update profile details by user ID
     // Path: PATCH /api/users/{id}/profile
+
 }

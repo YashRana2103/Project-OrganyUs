@@ -2,6 +2,7 @@ package com.organyus.service;
 
 import com.organyus.model.User;
 import com.organyus.repository.UserRepository;
+import jakarta.validation.Valid;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,5 +31,9 @@ public class UserService {
 
     public Optional<User> getById(ObjectId uid){
         return userRepository.findById(uid);
+    }
+
+    public Optional<User> getByEmail(String email) {
+        return userRepository.findByEmail(email);
     }
 }

@@ -1,0 +1,621 @@
+[{
+  "_id": {
+    "$oid": "685666ce21938c3c8c6ddd59"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b22fe"
+  },
+  "rid": {
+    "$oid": "68565b7c8184866fefc0d439"
+  },
+  "name": "Alice Admin",
+  "email": "alice.admin@example.com",
+  "hashPwd": "alicePass123",
+  "phone": "9876543210",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:01:18.003Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:01:18.003Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "685666ce21938c3c8c6ddd5a"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b22ff"
+  },
+  "rid": {
+    "$oid": "68565b948184866fefc0d43a"
+  },
+  "name": "Bob Head HR",
+  "email": "bob.hrhead@example.com",
+  "hashPwd": "bobHead456",
+  "phone": "9988776655",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:01:18.003Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:01:18.003Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "685666ce21938c3c8c6ddd5b"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b22ff"
+  },
+  "rid": {
+    "$oid": "68565ba18184866fefc0d43b"
+  },
+  "name": "Cathy HR",
+  "email": "cathy.hr@example.com",
+  "hashPwd": "cathyHR789",
+  "phone": "9990001112",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:01:18.003Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:01:18.003Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "685666ce21938c3c8c6ddd5c"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2300"
+  },
+  "rid": {
+    "$oid": "68565bb18184866fefc0d43c"
+  },
+  "name": "Derek Finance",
+  "email": "derek.finance@example.com",
+  "hashPwd": "derek$2024",
+  "phone": "9123456780",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:01:18.004Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:01:18.004Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "685666ce21938c3c8c6ddd5d"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2301"
+  },
+  "rid": {
+    "$oid": "68565bc28184866fefc0d43d"
+  },
+  "name": "Eva Manager",
+  "email": "eva.manager@example.com",
+  "hashPwd": "evamgr01",
+  "phone": "9211123456",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:01:18.004Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:01:18.004Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "685666ce21938c3c8c6ddd5e"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2301"
+  },
+  "rid": {
+    "$oid": "68565bd78184866fefc0d43e"
+  },
+  "name": "Frank Engineer",
+  "email": "frank.eng@example.com",
+  "hashPwd": "frankDev9",
+  "phone": "9001122334",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:01:18.004Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:01:18.004Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "685666ce21938c3c8c6ddd5f"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2303"
+  },
+  "rid": {
+    "$oid": "68565bd78184866fefc0d43e"
+  },
+  "name": "Gina Ops",
+  "email": "gina.ops@example.com",
+  "hashPwd": "ginOps!321",
+  "phone": "9345678910",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:01:18.004Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:01:18.004Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "685666ce21938c3c8c6ddd60"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2302"
+  },
+  "rid": {
+    "$oid": "68565bc28184866fefc0d43d"
+  },
+  "name": "Harry Projects",
+  "email": "harry.proj@example.com",
+  "hashPwd": "projPower12",
+  "phone": "9988771122",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:01:18.004Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:01:18.004Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "685666ce21938c3c8c6ddd61"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2301"
+  },
+  "rid": {
+    "$oid": "68565bd78184866fefc0d43e"
+  },
+  "name": "Ivy Intern",
+  "email": "ivy.intern@example.com",
+  "hashPwd": "internTry",
+  "phone": "9345678911",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:01:18.005Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:01:18.005Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "685666ce21938c3c8c6ddd62"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b22fe"
+  },
+  "rid": {
+    "$oid": "68565b7c8184866fefc0d439"
+  },
+  "name": "Jake Admin",
+  "email": "jake.admin@example.com",
+  "hashPwd": "JakeTop999",
+  "phone": "9876500012",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:01:18.005Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:01:18.005Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "685666ce21938c3c8c6ddd63"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b22ff"
+  },
+  "rid": {
+    "$oid": "68565bd78184866fefc0d43e"
+  },
+  "name": "Karen HR",
+  "email": "karen.hr@example.com",
+  "hashPwd": "KarenHR456",
+  "phone": "9822113344",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:01:18.005Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:01:18.005Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "685666ce21938c3c8c6ddd64"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2302"
+  },
+  "rid": {
+    "$oid": "68565b948184866fefc0d43a"
+  },
+  "name": "Liam Lead",
+  "email": "liam.lead@example.com",
+  "hashPwd": "leadStrong",
+  "phone": "9345667890",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:01:18.005Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:01:18.005Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd65"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2301"
+  },
+  "rid": {
+    "$oid": "68565bd78184866fefc0d43e"
+  },
+  "name": "Yash Patel",
+  "email": "yash.patel@example.com",
+  "hashPwd": "Yash@2025",
+  "phone": "9876500100",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.152Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.152Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd66"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2300"
+  },
+  "rid": {
+    "$oid": "68565bb18184866fefc0d43c"
+  },
+  "name": "Priya Sharma",
+  "email": "priya.sharma@example.com",
+  "hashPwd": "Priya$321",
+  "phone": "9988771234",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.152Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.152Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd67"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b22ff"
+  },
+  "rid": {
+    "$oid": "68565ba18184866fefc0d43b"
+  },
+  "name": "Ankit Mehta",
+  "email": "ankit.mehta@example.com",
+  "hashPwd": "Ankit456!",
+  "phone": "9321456780",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.152Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.152Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd68"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b22fe"
+  },
+  "rid": {
+    "$oid": "68565b7c8184866fefc0d439"
+  },
+  "name": "Radhika Joshi",
+  "email": "radhika.joshi@example.com",
+  "hashPwd": "Radhika2024",
+  "phone": "9001123344",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.152Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.152Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd69"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2303"
+  },
+  "rid": {
+    "$oid": "68565bc28184866fefc0d43d"
+  },
+  "name": "Karan Desai",
+  "email": "karan.desai@example.com",
+  "hashPwd": "DesaiKaran77",
+  "phone": "9112233445",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.152Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.152Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd6a"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2302"
+  },
+  "rid": {
+    "$oid": "68565bc28184866fefc0d43d"
+  },
+  "name": "Swati Iyer",
+  "email": "swati.iyer@example.com",
+  "hashPwd": "IyerPass123",
+  "phone": "9334455667",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.153Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd6b"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2301"
+  },
+  "rid": {
+    "$oid": "68565bd78184866fefc0d43e"
+  },
+  "name": "Rohit Rane",
+  "email": "rohit.rane@example.com",
+  "hashPwd": "RaneDev@99",
+  "phone": "9223344556",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.153Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd6c"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2302"
+  },
+  "rid": {
+    "$oid": "68565bc28184866fefc0d43d"
+  },
+  "name": "Sneha Nair",
+  "email": "sneha.nair@example.com",
+  "hashPwd": "SnehaPro11",
+  "phone": "9111122233",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.153Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd6d"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2300"
+  },
+  "rid": {
+    "$oid": "68565bb18184866fefc0d43c"
+  },
+  "name": "Vikas Kapoor",
+  "email": "vikas.kapoor@example.com",
+  "hashPwd": "VKfin$24",
+  "phone": "9887766554",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.153Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd6e"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2301"
+  },
+  "rid": {
+    "$oid": "68565bc28184866fefc0d43d"
+  },
+  "name": "Mehul Jain",
+  "email": "mehul.jain@example.com",
+  "hashPwd": "Mehul!code",
+  "phone": "9233445566",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.153Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd6f"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2301"
+  },
+  "rid": {
+    "$oid": "68565bd78184866fefc0d43e"
+  },
+  "name": "Neha Singh",
+  "email": "neha.singh@example.com",
+  "hashPwd": "NehaC0de",
+  "phone": "9001234567",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.154Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.154Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd70"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2300"
+  },
+  "rid": {
+    "$oid": "68565bb18184866fefc0d43c"
+  },
+  "name": "Rajesh Verma",
+  "email": "rajesh.verma@example.com",
+  "hashPwd": "Rajesh#2024",
+  "phone": "9811223344",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.154Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.154Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd71"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b22ff"
+  },
+  "rid": {
+    "$oid": "68565ba18184866fefc0d43b"
+  },
+  "name": "Tina Agarwal",
+  "email": "tina.agarwal@example.com",
+  "hashPwd": "TinaHR123",
+  "phone": "9123454321",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.154Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.154Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd72"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2302"
+  },
+  "rid": {
+    "$oid": "68565bc28184866fefc0d43d"
+  },
+  "name": "Saurabh Kulkarni",
+  "email": "saurabh.kulkarni@example.com",
+  "hashPwd": "KulkarniX",
+  "phone": "9321009988",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.154Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.154Z"
+  },
+  "_class": "com.organyus.model.User"
+},
+{
+  "_id": {
+    "$oid": "6856678721938c3c8c6ddd73"
+  },
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2303"
+  },
+  "rid": {
+    "$oid": "68565bd78184866fefc0d43e"
+  },
+  "name": "Divya Rao",
+  "email": "divya.rao@example.com",
+  "hashPwd": "Divya#ops",
+  "phone": "9345678901",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T08:04:23.154Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T08:04:23.154Z"
+  },
+  "_class": "com.organyus.model.User"
+}]

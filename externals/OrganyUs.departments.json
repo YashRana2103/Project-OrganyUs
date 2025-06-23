@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "68565da75cf0fa43d25b22fe"
+  },
+  "name": "Admin",
+  "slug": "admin",
+  "desc": "Manages system-level configuration and high-level operations.",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T07:22:15.363Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T07:22:15.363Z"
+  },
+  "_class": "com.organyus.model.Department"
+},
+{
+  "_id": {
+    "$oid": "68565da75cf0fa43d25b22ff"
+  },
+  "name": "Human Resources",
+  "slug": "hr",
+  "desc": "Handles recruitment, onboarding, leaves, and employee management.",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T07:22:15.372Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T07:22:15.372Z"
+  },
+  "_class": "com.organyus.model.Department"
+},
+{
+  "_id": {
+    "$oid": "68565da75cf0fa43d25b2300"
+  },
+  "name": "Finance",
+  "slug": "finance",
+  "desc": "Manages salaries, reimbursements, and company financials.",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T07:22:15.372Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T07:22:15.372Z"
+  },
+  "_class": "com.organyus.model.Department"
+},
+{
+  "_id": {
+    "$oid": "68565da75cf0fa43d25b2301"
+  },
+  "name": "Engineering",
+  "slug": "engineering",
+  "desc": "Builds and maintains software products or internal tools.",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T07:22:15.373Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T07:22:15.373Z"
+  },
+  "_class": "com.organyus.model.Department"
+},
+{
+  "_id": {
+    "$oid": "68565da75cf0fa43d25b2302"
+  },
+  "name": "Projects",
+  "slug": "projects",
+  "desc": "Manages planning, timelines, and team allocations for projects.",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T07:22:15.373Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T07:22:15.373Z"
+  },
+  "_class": "com.organyus.model.Department"
+},
+{
+  "_id": {
+    "$oid": "68565da75cf0fa43d25b2303"
+  },
+  "name": "Operations",
+  "slug": "operations",
+  "desc": "Coordinates inter-departmental workflows and office logistics.",
+  "state": "ACTIVE",
+  "createdAt": {
+    "$date": "2025-06-21T07:22:15.373Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T07:22:15.373Z"
+  },
+  "_class": "com.organyus.model.Department"
+}]

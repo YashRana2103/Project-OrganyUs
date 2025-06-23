@@ -1,0 +1,53 @@
+[{
+  "_id": {
+    "$oid": "6856ae5486dd795731a6a8ca"
+  },
+  "name": "Website Redesign",
+  "slug": "website-redesign",
+  "desc": "A project to redesign the company website.",
+  "deptId": {
+    "$oid": "68565da75cf0fa43d25b2301"
+  },
+  "pmId": {
+    "$oid": "685666ce21938c3c8c6ddd5d"
+  },
+  "startDate": {
+    "$date": "2025-06-01T00:00:00.000Z"
+  },
+  "deadline": {
+    "$date": "2025-09-01T00:00:00.000Z"
+  },
+  "createdBy": {
+    "$oid": "685666ce21938c3c8c6ddd5d"
+  },
+  "assignedTo": [
+    {
+      "$oid": "685666ce21938c3c8c6ddd5e"
+    },
+    {
+      "$oid": "685666ce21938c3c8c6ddd61"
+    },
+    {
+      "$oid": "6856678721938c3c8c6ddd65"
+    }
+  ],
+  "status": "NOT_STARTED",
+  "priority": "MEDIUM",
+  "tags": [
+    "UI",
+    "Frontend",
+    "Redesign"
+  ],
+  "notes": [
+    "Kickoff meeting done",
+    "Wireframes approved"
+  ],
+  "progress": 0,
+  "createdAt": {
+    "$date": "2025-06-21T13:06:28.118Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T13:06:28.118Z"
+  },
+  "_class": "com.organyus.model.Project"
+}]

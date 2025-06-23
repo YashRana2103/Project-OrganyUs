@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "68565b7c8184866fefc0d439"
+  },
+  "name": "Admin",
+  "slug": "admin",
+  "desc": "Has access to everything across the system.",
+  "isSystemRole": true,
+  "createdAt": {
+    "$date": "2025-06-21T07:13:00.947Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T07:13:00.947Z"
+  },
+  "_class": "com.organyus.model.Role"
+},
+{
+  "_id": {
+    "$oid": "68565b948184866fefc0d43a"
+  },
+  "name": "Head",
+  "slug": "head",
+  "desc": "Department head; manages people and work in one department.",
+  "isSystemRole": false,
+  "createdAt": {
+    "$date": "2025-06-21T07:13:24.370Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T07:13:24.370Z"
+  },
+  "_class": "com.organyus.model.Role"
+},
+{
+  "_id": {
+    "$oid": "68565ba18184866fefc0d43b"
+  },
+  "name": "HR",
+  "slug": "hr",
+  "desc": "Manages hiring, onboarding, and employee records.",
+  "isSystemRole": false,
+  "createdAt": {
+    "$date": "2025-06-21T07:13:37.545Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T07:13:37.545Z"
+  },
+  "_class": "com.organyus.model.Role"
+},
+{
+  "_id": {
+    "$oid": "68565bb18184866fefc0d43c"
+  },
+  "name": "Finance",
+  "slug": "finance",
+  "desc": "Handles payroll, invoices, and financial records.",
+  "isSystemRole": false,
+  "createdAt": {
+    "$date": "2025-06-21T07:13:53.016Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T07:13:53.016Z"
+  },
+  "_class": "com.organyus.model.Role"
+},
+{
+  "_id": {
+    "$oid": "68565bc28184866fefc0d43d"
+  },
+  "name": "Manager",
+  "slug": "manager",
+  "desc": "Leads projects and oversees teams.",
+  "isSystemRole": false,
+  "createdAt": {
+    "$date": "2025-06-21T07:14:10.562Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T07:14:10.562Z"
+  },
+  "_class": "com.organyus.model.Role"
+},
+{
+  "_id": {
+    "$oid": "68565bd78184866fefc0d43e"
+  },
+  "name": "Employee",
+  "slug": "employee",
+  "desc": "Core team member working under a department or project.",
+  "isSystemRole": false,
+  "createdAt": {
+    "$date": "2025-06-21T07:14:31.783Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-21T07:14:31.783Z"
+  },
+  "_class": "com.organyus.model.Role"
+}]

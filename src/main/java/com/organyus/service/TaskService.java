@@ -1,7 +1,7 @@
 package com.organyus.service;
 
-import com.organyus.model.Project;
-import com.organyus.repository.ProjectRepository;
+import com.organyus.model.Task;
+import com.organyus.repository.TaskRepository;
 import jakarta.validation.Valid;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,21 +14,21 @@ import java.util.Optional;
 public class TaskService {
 
     @Autowired
-    private ProjectRepository projectRepository;
+    private TaskRepository taskRepository;
 
-    public Project addOne(Project project) {
-        return projectRepository.save(project);
+    public Task addOne(Task task) {
+        return taskRepository.save(task);
     }
 
-    public List<Project> addAll(List<Project> projects) {
-        return projectRepository.saveAll(projects);
+    public List<Task> addAll(List<Task> tasks) {
+        return taskRepository.saveAll(tasks);
     }
 
-    public List<Project> getAll() {
-        return projectRepository.findAll();
+    public List<Task> getAll() {
+        return taskRepository.findAll();
     }
 
-    public Optional<Project> getById(@Valid ObjectId projectId) {
-        return projectRepository.findById(projectId);
+    public Optional<Task> getById(@Valid ObjectId taskId) {
+        return taskRepository.findById(taskId);
     }
 }

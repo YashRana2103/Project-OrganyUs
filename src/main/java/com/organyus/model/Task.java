@@ -16,35 +16,31 @@ import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
-@Document(collection = "projects")
+@Document(collection = "tasks")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class Task {
     @Id
-    private String projectId; // pk
+    private String taskId; // pk
 
     @NotBlank
-    private String name;
-
-    @NotBlank
-    private String slug;
+    private String title;
 
     @NotBlank
     private String desc;
 
     @NotNull
-    private ObjectId deptId; //fk
-
-    @NotNull
-    private ObjectId pmId; // fk - Project Manager ID
+    private ObjectId projectId; // fk - Project ID
 
     @NotNull
     private Date startDate;
 
     @NotNull
     private Date deadline;
+
+    private Date completedAt;
 
     @NotNull
     private ObjectId createdBy; // fk - User ID of the creator
@@ -57,13 +53,11 @@ public class Task {
     private Priority priority = Priority.MEDIUM;
 
     @NotNull
-    private List<String> tags;
+    private List<String> remarks; // List of remarks or comments on the task
 
-    @NotNull
-    private List<String> notes;
-
-    @NotNull
     private Integer progress = 0;
+
+    private List<String> attachments; // List of attachment URLs or file paths
 
     @CreatedDate
     private LocalDateTime createdAt;

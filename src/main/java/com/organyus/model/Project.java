@@ -63,7 +63,6 @@ public class Project {
     @NotNull
     private List<String> notes;
 
-    @NotNull
     private Integer progress = 0;
 
     @CreatedDate

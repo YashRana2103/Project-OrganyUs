@@ -1,7 +1,7 @@
 package com.organyus.controller;
 
-import com.organyus.model.Project;
-import com.organyus.service.ProjectService;
+import com.organyus.model.Task;
+import com.organyus.service.TaskService;
 import jakarta.validation.Valid;
 import org.bson.types.ObjectId;
 import org.springframework.http.HttpStatus;
@@ -12,40 +12,40 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/projects")
+@RequestMapping("/tasks")
 public class TaskController {
 
-    private final ProjectService projectService;
+    private final TaskService taskService;
 
-    public TaskController(ProjectService projectService) {
-        this.projectService = projectService;
+    public TaskController(TaskService taskService) {
+        this.taskService = taskService;
     }
 
     @PostMapping
-    public ResponseEntity<?> addOne(@Valid @RequestBody Project project) {
-        return new ResponseEntity<>(projectService.addOne(project), HttpStatus.OK) ;
+    public ResponseEntity<?> addOne(@Valid @RequestBody Task task) {
+        return new ResponseEntity<>(taskService.addOne(task), HttpStatus.OK) ;
     }
 
     @PostMapping("/all")
-    public ResponseEntity<?> addAll(@Valid @RequestBody List<Project> projects) {
-        return new ResponseEntity<>(projectService.addAll(projects), HttpStatus.OK) ;
+    public ResponseEntity<?> addAll(@Valid @RequestBody List<Task> tasks) {
+        return new ResponseEntity<>(taskService.addAll(tasks), HttpStatus.OK) ;
     }
 
     @GetMapping
     public ResponseEntity<?> getAll(){
-        List<Project> projects = projectService.getAll();
-        if(projects.isEmpty()){
-            return new ResponseEntity<>("No projects found!", HttpStatus.NOT_FOUND);
+        List<Task> tasks = taskService.getAll();
+        if(tasks.isEmpty()){
+            return new ResponseEntity<>("No tasks found!", HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(projects, HttpStatus.OK);
+        return new ResponseEntity<>(tasks, HttpStatus.OK);
     }
 
-    @GetMapping("/{projectId}")
-    public ResponseEntity<?> getById(@PathVariable ObjectId projectId) {
-        Optional<Project> project = projectService.getById(projectId);
-        if(project.isEmpty()){
-            return new ResponseEntity<>("No project found!", HttpStatus.NOT_FOUND);
+    @GetMapping("/{taskId}")
+    public ResponseEntity<?> getById(@PathVariable ObjectId taskId) {
+        Optional<Task> task = taskService.getById(taskId);
+        if(task.isEmpty()){
+            return new ResponseEntity<>("No task found!", HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(project.get(), HttpStatus.OK);
+        return new ResponseEntity<>(task.get(), HttpStatus.OK);
     }
 }

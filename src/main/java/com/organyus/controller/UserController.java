@@ -22,6 +22,7 @@ public class UserController {
         this.userService = userService;
     }
 
+
     @PostMapping
     public ResponseEntity<?> addOne(@Valid @RequestBody User user) {
         return new ResponseEntity<>(userService.addOne(user), HttpStatus.OK);
